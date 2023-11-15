@@ -33,14 +33,13 @@ metadata:
   name: rollout-bluegreen-active
   namespace: argo-sample-app
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: rollout-bluegreen
   ports:
   - protocol: TCP
     port: 80
     targetPort: 8080
-    nodePort: 30081
 
 ---
 kind: Service
@@ -49,11 +48,10 @@ metadata:
   name: rollout-bluegreen-preview
   namespace: argo-sample-app
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: rollout-bluegreen
   ports:
   - protocol: TCP
     port: 80
     targetPort: 8080
-    nodePort: 30082
