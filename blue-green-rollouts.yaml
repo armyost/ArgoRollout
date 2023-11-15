@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollout-bluegreen
+  namespace: argo-sample-app
 spec:
   replicas: 2
   revisionHistoryLimit: 2
@@ -30,6 +31,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-active
+  namespace: argo-sample-app
 spec:
   type: NodePort
   selector:
@@ -45,6 +47,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-preview
+  namespace: argo-sample-app
 spec:
   type: NodePort
   selector:
