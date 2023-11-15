@@ -15,7 +15,7 @@ spec:
         app: rollout-bluegreen
     spec:
       containers:
-      - name: rollouts-demo
+      - name: bg-rollouts-demo
         image: argoproj/rollouts-demo:blue
         imagePullPolicy: Always
         ports:

@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: "nginx"
   rules:
-  - host: active.sicc.com
+  - host: active.armyost.com
     http:
       paths:
       - path: /
@@ -30,7 +30,7 @@ metadata:
 spec:
   ingressClassName: "nginx"
   rules:
-  - host: preview.sicc.com
+  - host: preview.armyost.com
     http:
       paths:
       - path: /
