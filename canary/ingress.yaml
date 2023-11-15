@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: "nginx"
   rules:
-  - host: canary.sicc.com
+  - host: canary.armyosf.com
     http:
       paths:
       - path: /
